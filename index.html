@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <script src="scripts/main.js"></script>
+    <title>Todo simple app</title>
+</head>
+
+<body>
+    <main class="background full-screen main-font mainContainer">
+        <h1 class="foreground">Se mantenha em ordem 🤓☝️</h1>
+        <div class="taskContainer main-font foreground">
+            <div id="tasks">
+                <h1 id="hint">Nenhuma tarefa registrada</h1>
+            </div>
+            <div class="bottom-bar">
+                <span>
+                    <button onclick="registerTask(event)">Adicionar</button>
+                    <input type="text" name="task" onkeyup="updateTaskName(event)">
+                    <select onchange="updatePriority(event)">
+                        <optgroup>
+                            <option disabled selected hidden>Prioridade</option>
+                            <option value="0">Normal</option>
+                            <option value="1">Importante</option>
+                            <option value="2">Urgente</option>
+                        </optgroup>
+                    </select>
+                </span>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
