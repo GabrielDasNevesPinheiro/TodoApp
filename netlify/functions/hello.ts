@@ -2,7 +2,7 @@ import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
 
-    const num = Math.floor(Math.random());
+    const num = Math.floor(Math.random()*10000);
 
     return {
     statusCode: 200,
