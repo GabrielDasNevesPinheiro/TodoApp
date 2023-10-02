@@ -1,9 +1,12 @@
 import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
-  return {
+
+    const num = Math.floor(Math.random());
+
+    return {
     statusCode: 200,
-    body: JSON.stringify({ message: "I'm Working!" }),
+    body: JSON.stringify({ message: `${num} is your lucky number` }),
   }
 };
 
